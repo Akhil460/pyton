@@ -1,0 +1,17 @@
+# Import the random module
+import random
+
+# List of words to guess from
+words = ["apple", "banana", "cherry", "date", "elderberry"]
+
+# Choose a random word from the list
+word_to_guess = random.choice(words)
+
+# Initialize the guessed word with underscores
+guessed_word = ["_"] * len(word_to_guess)
+
+# Initialize the number of tries
+tries = 10
+
+print("Welcome to Hangman!")
+print("I'm thinking of a word that
