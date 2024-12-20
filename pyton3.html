@@ -1,0 +1,43 @@
+# Initialize an empty list to store tasks
+tasks = []
+
+while True:
+    # Print the main menu
+    print("\nTo-Do List App")
+    print("1. Add task")
+    print("2. View tasks")
+    print("3. Delete task")
+    print("4. Quit")
+
+    # Ask the user for their choice
+    choice = input("Enter your choice: ")
+
+    # Handle the user's choice
+    if choice == "1":
+        # Ask the user for the task description
+        task_description = input("Enter task description: ")
+        # Add the task to the list
+        tasks.append(task_description)
+        print("Task added successfully!")
+    elif choice == "2":
+        # Print the list of tasks
+        print("\nTasks:")
+        for i, task in enumerate(tasks, start=1):
+            print(f"{i}. {task}")
+    elif choice == "3":
+        # Print the list of tasks
+        print("\nTasks:")
+        for i, task in enumerate(tasks, start=1):
+            print(f"{i}. {task}")
+        # Ask the user for the task number to delete
+        task_number = int(input("Enter task number to delete: "))
+        # Delete the task from the list
+        del tasks[task_number - 1]
+        print("Task deleted successfully!")
+    elif choice == "4":
+        # Quit the app
+        print("Goodbye!")
+        break
+    else:
+        # Invalid choice
+        print("Invalid choice. Please try again.")
